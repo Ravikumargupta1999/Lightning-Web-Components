@@ -1,0 +1,30 @@
+<template>
+    <article class="slds-card slds-m-around_medium">
+        <lightning-combobox 
+            class="slds-m-around_medium"
+            label="Primary" 
+            value={accountIndustry} 
+            options={filesOptions}
+            onchange={handleFilesOptions}>
+        </lightning-combobox>
+
+        <div class="slds-m-around_medium">
+            <lightning-file-upload
+                label="Upload Files"
+                name="fileUploader"
+                accept={acceptedFormats}
+                record-id={recordId}
+                onuploadfinished={handleUploadFinished}
+                multiple
+            >
+            </lightning-file-upload>
+        </div>
+
+    
+
+
+        
+    </article>
+
+   
+</template>

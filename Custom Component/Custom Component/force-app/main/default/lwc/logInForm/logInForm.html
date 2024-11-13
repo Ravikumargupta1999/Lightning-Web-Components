@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Registration Form" class="slds-m-around_medium">
+        <lightning-input name="username" class="slds-m-around_medium" label="User Name" type="text" placeholder="Enter First Name" onchange={handleChange} required></lightning-input>
+
+
+        <lightning-input name="password"  class="slds-m-around_medium" label="Enter Password" type="password" placeholder="Enter Password" onchange={handleChange} required></lightning-input>
+
+
+        <footer class="slds-card__footer">
+            <button type="button" class="slds-button slds-button_brand">Login </button>
+          </footer>
+
+        <div class="slds-m-around_medium">
+            <div class="slds-p-around_medium">
+                <p><lightning-formatted-url value="my/path" tooltip="Omit leading slash" label="Forgot your password?" target="_blank"></lightning-formatted-url></p>
+                <p><lightning-formatted-url value="www.salesforce.com" tooltip="Use full domain name" label="Not a member?" target="_blank"></lightning-formatted-url></p>
+                <p><lightning-formatted-url value="https://salesforce.com" tooltip="Use https://domain-name" label="Are you an employee? Login here" target="_blank" ></lightning-formatted-url></p>
+            </div>
+        </div>  
+
+    </lightning-card>
+</template>

@@ -1,0 +1,24 @@
+<template>
+    <!-- <lightning-card title="Custom Validations In Lightning Web Components">
+       <div style="justify-content:center;display:flex">
+            <div>
+            
+                
+                <lightning-input class="dateCmp" label="Enter Date" type="date" style="width:fit-content" onblur={testTheData}>
+                </lightning-input><br/><br/>
+
+                
+            </div>
+
+        </div>
+    </lightning-card> -->
+
+
+
+    <div class="password-container">
+        <lightning-input type={inputType} label="Password" value={password} onchange={handlePasswordChange}></lightning-input>
+        <lightning-icon class="password-toggle" icon-name={iconName} alternative-text="Toggle Password" onclick={togglePasswordVisibility}></lightning-icon>
+     </div>
+
+
+</template>

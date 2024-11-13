@@ -1,0 +1,18 @@
+/* element : h1, div,p, span */
+/* element, classes, psuedo  */
+
+p{
+    color: green;
+    font-size: 30px;
+    border: 1px solid red;
+}
+
+.user{
+    color: pink;
+    font-size: 30px;
+}
+
+.user:hover{
+    font-size: 50px;
+    color: rebeccapurple;
+}

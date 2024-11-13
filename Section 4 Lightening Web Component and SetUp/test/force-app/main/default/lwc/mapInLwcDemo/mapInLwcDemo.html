@@ -1,0 +1,19 @@
+<template>
+    <div class="slds-box">
+        
+        <template if:true={mapMarkers.length}>
+            <lightning-map 
+                map-markers={mapMarkers}
+                markers-title={markersTitle}
+                onmarkerselect={callMarkerHander}
+                selected-marker-value={selectedMarker}
+            ></lightning-map>
+        </template>
+
+        <template if:true={mapMarkers.length}>
+            <div>No Account</div>
+        </template>
+
+       
+    </div>
+</template>

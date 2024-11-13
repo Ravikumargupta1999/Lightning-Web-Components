@@ -1,0 +1,80 @@
+body {
+  background-color: red;
+  color: white;
+  font-family: Arial, sans-serif;
+  border-color: white;
+}
+
+.main-container {
+  padding: 20px;
+  /* border-radius: 10px; */
+  background-color: rgba(230, 254, 245, 0.6) /* Light background color for better visibility */
+}
+
+.main-heading {
+  font-size: 24px;
+}
+
+.sub-heading {
+  font-size: 18px;
+}
+
+.slds-col {
+  text-align: center;
+}
+
+/* .c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9, .c10, .c11 {
+  width: 100%;
+  margin-bottom: 15px;
+} */
+
+.password-container {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+
+.dateCmp {
+  width: calc(100% - 2px); /* Adjusting for border width */
+}
+
+.aadharCmp label{
+  color: black;
+}
+
+.slds-card__footer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+button {
+  background-color: #6f8190; /* Salesforce blue color */
+  color: rgb(11, 8, 8);
+  padding: 5px 30px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #fdfefe; /* Darker shade on hover */
+  color: black;
+}
+
+lightning-formatted-url {
+  color: white;
+}
+
+.c1 label {
+  color: yellow;
+}
+
+

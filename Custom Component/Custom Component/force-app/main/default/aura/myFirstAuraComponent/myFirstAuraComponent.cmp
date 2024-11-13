@@ -1,0 +1,19 @@
+<aura:component  implements="flexipage:availableForAllPageTypes" access="global" >
+
+    <lightning:card>
+        <lightning:layout multipleRows='true'>
+            
+            <lightning:layoutitem size='12' padding='around-small'>
+                <lightning:input type='text' label='Username' aura:id='username' required='true'/>
+            </lightning:layoutitem>
+               
+            <lightning:layoutitem  size='12' padding='around-small'>
+               <lightning:input type='password' label='Password' aura:id='password' required='true'/> 
+            </lightning:layoutitem >
+            <c:registerComponent/>
+        </lightning:layout>
+        
+    </lightning:card>
+
+    <c:registrationForm/>
+</aura:component>

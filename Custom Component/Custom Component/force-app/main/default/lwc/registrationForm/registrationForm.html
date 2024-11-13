@@ -1,0 +1,84 @@
+<template>
+
+
+  <form>
+
+
+    <div style="margin: 20px auto; width: 500px; background-color: none; z-index:-1">
+      <lightning-card title = "Sign-Up Page" class="slds-m-horizontal_x-large" style="background-color: rgba(255, 255, 255, 0.1);">
+
+
+   
+          <lightning-card >
+            <lightning-input name="firstname" value={fullName.firstName} class="slds-m-around_medium c1" label="First Name" type="text" placeholder="Enter First Name" onchange={handleChange} required></lightning-input>
+      
+      
+            <lightning-input name="lastname" value={fullName.lastName} class="slds-m-around_medium c2" label="Last Name" type="text" placeholder="Enter Last Name" onchange={handleChange} required></lightning-input>
+      
+      
+            <lightning-input name="mobileNumber" class="slds-m-around_medium mobileCmp c3" value={fullName.phone} label="Mobile Number" type="number" placeholder="XXXX XXXXX" onblur={mobileNumberValidation} minlength="10" maxlength="10" onchange={handleChange} required></lightning-input>
+      
+      
+            <lightning-input name="address" value={fullName.address} class="slds-m-around_medium c4" label="Address" type="text" placeholder="Enter Address" onchange={handleChange} required></lightning-input>
+      
+            <div class="slds-m-around_medium" >
+              <lightning-radio-group name="notifications"
+                                label="Allow Notifications"
+                                options={radioOptions}
+                                class="c5"
+                                value={radioValues}
+                                onchange={handleChange}
+                                type="radio"></lightning-radio-group>
+            </div>
+            
+      
+      
+            <lightning-input name="email" value={fullName.email} class="slds-m-around_medium validate c6" label="Email" pattern="[A-Za-z0-9._-]+@[a-z0-9-]+\.[a-z]{2,}$" message-when-pattern-mismatch="Please enter a valid email" type="email" placeholder="xyz@gmail.com" onchange={handleChange} required></lightning-input>
+      
+      
+      
+            <div class="password-container">
+              <lightning-input name="aadharNumber"  class="slds-m-around_medium aadharCmp c7" label="Aadhar Number" type="text" placeholder="XXXX XXXX XXXX 9999"  onchange={handleChange} max-length="16" onblur={onblurEvent} value={aadharValue} minlength="16" maxlength="16" required></lightning-input>
+              <lightning-icon class="password-toggle"  icon-name={iconName} alternative-text="Toggle Password" size="x-small" title="x-small size" onclick={handleToggleAction}></lightning-icon>
+           </div>
+      
+            <lightning-input name="date" class="slds-m-around_medium dateCmp c8" label="Date Of Birth" type="date" placeholder="DD/MM/YYYY" onchange={handleChange} required></lightning-input>
+      
+      
+          
+      
+      
+            <div class="slds-m-around_medium" >
+              <lightning-checkbox-group name="Roles Interested In "
+                                  label="Roles Interested In"
+                                  options={options}
+                                  class="c9"
+                                  value={value}
+                                  onchange={handleSelectedValues}
+                                  required></lightning-checkbox-group>
+            </div>
+      
+            <template if:true={age}>
+              <lightning-input name="guardianname" value={fullName.guardianname} class="slds-m-around_medium c10" label="Guardian Name" type="text" placeholder="Enter Guardian Name" onchange={handleChange} required></lightning-input>
+      
+      
+              <div class="password-container">
+                <lightning-input name="guardianAadharNumber"  class="slds-m-around_medium aadharCmp c11" max-length="16" label="Guardian Aadhar Number" type="text" placeholder="XXXX XXXX XXXX 9999"  onchange={handleChange}  onblur={onblurEvent} value={guardianAadharValue} required></lightning-input>
+                <lightning-icon class="password-toggle"  icon-name={giconName} alternative-text="Toggle Password" size="x-small" title="x-small size" onclick={handleParentsToggleAction}></lightning-icon>
+             </div>
+            </template>
+            
+      
+            <footer class="slds-card__footer">
+              <button type="button" class="slds-button slds-button_brand" onclick={handlSubmit}>Sign Up</button>
+              <p><lightning-formatted-url value="https://hexaview43-dev-ed.develop.my.site.com/communitysite/s" label="Already have an Account?"></lightning-formatted-url></p>
+            </footer>
+      
+        </lightning-card>
+
+      </lightning-card>        
+  </div>
+
+  </form>
+   
+</template> 
